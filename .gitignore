@@ -1,0 +1,10 @@
+# Ignore datasets
+#Datasets/
+
+# Ignore results
+#Results/
+
+#Ignore saved models
+#Pretrained_Models/*.sav
+
+
