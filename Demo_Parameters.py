@@ -1,15 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Parameters for histogram layer experiments
-Only change parameters in this file before running
+Parameters for experiments
+Only change parameters in argparser (i.e., command line)
 demo.py
 @author: jpeeples 
 """
-import os
-import sys
 
 def Parameters(args):
-    ######## ONLY CHANGE PARAMETERS BELOW ########
+    ######## ONLY CHANGE PARAMETERS In Argparser ########
     #Flag for if results are to be saved out
     #Set to True to save results out and False to not save results
     save_results = args.save_results
@@ -32,24 +30,8 @@ def Parameters(args):
     
     #Set amount of details to print out (anything non-zero will result in printing)
     verbose = args.verbose
-    
-    #Set number of experimental runs/trials
-    numRuns = args.numRuns
    
-    #Visualization of results parameters
-    #Visualization parameters for figures
-    fig_size = 12
-    font_size = 24
-    
-    #Flag for TSNE visuals, set to True to create TSNE visual of features
-    #Set to false to not generate TSNE visuals
-    #Number of images to view for TSNE (defaults to all training imgs unless
-    #value is less than total training images).
-    TSNE_visual = True
-    Num_TSNE_images = 10000
-    
-    ######## ONLY CHANGE PARAMETERS ABOVE ########
-    #Location of texture datasets
+    #Location of datasets
     Data_dirs = {'7000 Bus': './Datasets/7000 Bus/',
                  '600 Bus': './Datasets/600 Bus/',
                  '14 Bus': './Datasets/14 Bus/'}
@@ -60,7 +42,7 @@ def Parameters(args):
     if ('use_pretrained' and (Dataset == '7000 Bus')):
         mode = 'Pretrained'
     else:
-        mode = 'Scratch'
+        mode = 'New'
     
     #Return dictionary of parameters
     Params = {'save_results': save_results,'folder': folder,
@@ -68,9 +50,7 @@ def Parameters(args):
               'use_pretrained': use_pretrained,
               'random_state': random_state,
               'train_percent': train_percent,
-              'mode': mode,'TSNE_visual': TSNE_visual,
-              'Num_TSNE_images': Num_TSNE_images,'fig_size': fig_size,
-              'font_size': font_size, 'numRuns': numRuns, 'n_iter_search': n_iter_search,
+              'mode': mode,'n_iter_search': n_iter_search,
               'verbose': verbose}
     
     return Params

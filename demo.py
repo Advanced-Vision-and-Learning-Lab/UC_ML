@@ -182,8 +182,6 @@ def parse_args():
                         help='Location to save models')
     parser.add_argument('--train_percent', type=float, default=.70,
                         help='Train percentage for division of initial dataset between 0 and 1 (default: 70%)')
-    parser.add_argument('-numRuns', type=int, default=1,
-                        help='Number of experimental runs of random intialization (default: 3)')
     args = parser.parse_args()
     return args
 

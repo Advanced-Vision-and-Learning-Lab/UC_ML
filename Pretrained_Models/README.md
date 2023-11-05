@@ -20,7 +20,7 @@ Pretrained_Models/
     ├── MLP.sav
     ├── Random Forest.sav
 ```
-3. After downloading the desired model(s), please run [`demo.py`](./main/demo.py) to run the multi-classification experiments with use_pretrained set to True (only available for 7000-bus case).
+3. After downloading the desired model(s), please run [`demo.py`](https://github.com/Advanced-Vision-and-Learning-Lab/UC_ML/blob/main/demo.py) to run the multi-classification experiments with use_pretrained set to True (only available for 7000-bus case).
 
 If you use the UC_ML models, please cite the following reference using the following entry.
 

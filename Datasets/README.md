@@ -27,7 +27,7 @@ Datasets/
     │   ├── Features.csv
     │   ├── Labels.csv
 ```
-3. After downloading the desired bus case(s), please run [`demo.py`](./main/demo.py) to run the multi-classification experiments.
+3. After downloading the desired bus case(s), please run [`demo.py`](https://github.com/Advanced-Vision-and-Learning-Lab/UC_ML/blob/main/demo.py) to run the multi-classification experiments.
 
 If you use the UC_ML dataset, please cite the following reference using the following entry.
 

@@ -119,11 +119,6 @@ def generate_PR_Curves(X,y,classifier,classifier_name,classifier_directory,
     plt.rcParams.update({'font.size': 14})
     ax.legend(handles=handles, labels=labels, loc="center left",fontsize=11)
     
-    # if plot_fuel_types:
-    #     ax.set_title("Precision-Recall Curve Based on Fuel Type",fontsize=16)
-    # else:
-    #     ax.set_title("Precision-Recall Curves",fontsize=16)
-        
     plt.rcParams.update({'font.size': 15})
     plt.show()
     plt.savefig('{}/{}.png'.format(classifier_directory,plot_title))
