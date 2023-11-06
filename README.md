@@ -47,9 +47,7 @@ The UC ML code uses the following functions.
 
 ## Parameters
 
-The parameters can be set in the following file and/or on the command line:
-   
-[`Demo_Parameters.py`](Demo_Parameters.py)
+The parameters can be set on the command line and the parameters for the experiments are stored in the [`Demo_Parameters.py`](Demo_Parameters.py).
 
 ## Inventory
 
