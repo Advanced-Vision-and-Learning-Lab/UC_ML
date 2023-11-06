@@ -22,7 +22,7 @@ The [`requirements.txt`](requirements.txt) file includes all the necessary packa
 
 ## Demo
 
-To get started, please follow the instructions in the [Datasets](Datasets) folder to download the dataset.
+To get started, please follow the instructions in the [Datasets](Datasets) and [Pretrained_Models](Pretrained_Models) folders to download the dataset(s) and model(s) respectively.
 Next, run [`demo.py`](demo.py) in Python IDE (e.g., Spyder) or command line to train, validate, and test models. 
 
 ## Main Functions
