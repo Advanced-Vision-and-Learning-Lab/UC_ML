@@ -9,8 +9,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from itertools import cycle
 import numpy as np
-from sklearn.metrics import PrecisionRecallDisplay
-from sklearn.metrics import average_precision_score, precision_recall_curve
+from sklearn.metrics import (average_precision_score, precision_recall_curve,
+                             precision_recall_fscore_support, PrecisionRecallDisplay)
 
 def generate_PR_Curves(X,y,classifier,classifier_name,classifier_directory,
                        data_directory, plot_fuel_types=False):
@@ -55,15 +55,38 @@ def generate_PR_Curves(X,y,classifier,classifier_name,classifier_directory,
         generator_data = pd.read_csv('{}{}.csv'.format(data_directory,'7000 Bus Generator Labels'))
         n_classes=len(generator_data["FuelType"].unique())
         fuel_types = generator_data["FuelType"].unique()
+        fuel_types.sort()
         fuel_list = generator_data["FuelType"]
         
+        #Get predictions
+        y_pred = classifier.predict(X)
+        
+        #Initialize array for metric scores for each generator (macro and micro averages for each generator)
+        metric_names = ['Precision (Macro)', 'Precision (Micro)', 
+                        'Recall (Macro)', 'Recall (Micro)',
+                        'F1 Score (Macro)', 'F1 Score (Micro)']
+        metric_table = np.zeros((n_classes,6))
         for i in range(n_classes):
             #Use the fuel types to select the correct samples for evaluation
             y_test_subset =   y[:,fuel_list==fuel_types[i]]
             y_prob_subset = y_prob[:,fuel_list==fuel_types[i]]
+            y_pred_subset = y_pred[:,fuel_list==fuel_types[i]]
             precision[i], recall[i], _ = precision_recall_curve( np.ravel(y_test_subset), np.ravel( y_prob_subset))
             average_precision[i] = average_precision_score(np.ravel(y_test_subset), np.ravel( y_prob_subset))
+            
+            #Compute macro and micro averages
+            macro_scores = precision_recall_fscore_support(y_test_subset, y_pred_subset,average='macro')[:-1]
+            micro_scores = precision_recall_fscore_support(y_test_subset, y_pred_subset,average='micro')[:-1]
+            
+            #Format scores for tables (macro and micro scores organized for each metric)
+            metric_table[i,:] = np.ravel([macro_scores,micro_scores],'F')
     
+        #Convert table to Pandas array
+        df = pd.DataFrame(np.round(metric_table,decimals=3),columns=metric_names,index=fuel_types)
+        
+        #Save to excel file
+        df.to_csv('{}/{}.csv'.format(classifier_directory,'Fuel_Types_Metrics'))
+        
         colors = cycle(["navy", "turquoise", "darkorange", "cornflowerblue", "teal", "slategray", "brown"])
         
         for i, color, gen_type in zip(range(n_classes), colors, generator_data["FuelType"].unique()):
@@ -122,6 +145,6 @@ def generate_PR_Curves(X,y,classifier,classifier_name,classifier_directory,
     plt.rcParams.update({'font.size': 15})
     plt.show()
     plt.savefig('{}/{}.png'.format(classifier_directory,plot_title))
-    plt.close()
+    plt.close('all')
 
         

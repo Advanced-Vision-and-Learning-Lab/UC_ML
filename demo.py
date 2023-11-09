@@ -178,7 +178,7 @@ def parse_args():
                         help='Number of parameter settings that are sampled.Trades off runtime vs quality of the solution (default: 15)')
     parser.add_argument('--use_pretrained', default=True, action=argparse.BooleanOptionalAction,
                         help='Use saved weights of models, only for 7000 bus case (default: True), --no-use_pretrained to set to False')
-    parser.add_argument('--folder', type=str, default='Saved_Models/Test/',
+    parser.add_argument('--folder', type=str, default='Results/',
                         help='Location to save models')
     parser.add_argument('--train_percent', type=float, default=.70,
                         help='Train percentage for division of initial dataset between 0 and 1 (default: 70%)')
