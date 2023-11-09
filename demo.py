@@ -153,7 +153,7 @@ def main(Params):
             with open((classifier_dir + '/Zero_One_Loss.txt'), "w") as output:
                 output.write(str(zero_one_loss_val))
                 
-            np.save('{}/{}'.format(classifier_dir,'multi_label_confusion_matrix.'),cm)
+            np.save('{}/{}'.format(classifier_dir,'multi_label_confusion_matrix'),cm)
             
             #Generate Precision-Recall Curves
             generate_PR_Curves(X_test_norm,y_test,best_model,key,classifier_dir,
