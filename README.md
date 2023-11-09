@@ -4,8 +4,9 @@
 Farnaz Safdarian, Joshua Peeples, Dillon Richards, Jessica Wert, Thomas Overbye
 
 Note: If this code is used, cite it: Farnaz Safdarian, Joshua Peeples, Dillon Richards, Jessica Wert, Thomas Overbye. (2023, November 9) Peeples-Lab/UCML: Initial Release (Version v1.0). 
-[`Zendo`](https://doi.org/10.5281/zenodo.10092401).https://zenodo.org/records/10092401
-[[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10092401.svg)](https://doi.org/10.5281/zenodo.10092401)
+
+[`Zendo`](https://doi.org/10.5281/zenodo.10092401)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10092401.svg)](https://doi.org/10.5281/zenodo.10092401)
 
 [`arXiv`]()
 
