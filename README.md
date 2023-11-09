@@ -3,13 +3,13 @@
 
 Farnaz Safdarian, Joshua Peeples, Dillon Richards, Jessica Wert, Thomas Overbye
 
-Note: If this code is used, cite it: Farnaz Safdarian, Joshua Peeples, Dillon Richards, Jessica Wert, Thomas Overbye. (2023, September 26) Peeples-Lab/UCML: Initial Release (Version v1.0). 
-[`Zendo`](https://doi.org/10.5281/zenodo.8184517).https://zenodo.org/record/8184517
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8184517.svg)](https://doi.org/10.5281/zenodo.8184517)
+Note: If this code is used, cite it: Farnaz Safdarian, Joshua Peeples, Dillon Richards, Jessica Wert, Thomas Overbye. (2023, November 9) Peeples-Lab/UCML: Initial Release (Version v1.0). 
+[`Zendo`](https://doi.org/10.5281/zenodo.10092401).https://zenodo.org/records/10092401
+[[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10092401.svg)](https://doi.org/10.5281/zenodo.10092401)
 
 [`arXiv`]()
 
-[`BibTeX`](#CitingHist)
+[`BibTeX`](#Citing)
 
 In this repository, we provide the paper and code for "A Fast Learning-Based Unit Commitment Strategy with AC Optimal Power Flow for Large Grids with Direct Inclusion of Weather."
 
@@ -69,7 +69,7 @@ This source code is licensed under the license found in the [`LICENSE`](LICENSE)
 
 This product is Copyright (c) 2023 F. Safdarian, J. Peeples, D. Richards, J. Wert, T. Overbye. All rights reserved.
 
-## <a name="CitingHist"></a>Citing Unit Commitment Machine Learning
+## <a name="Citing"></a>Citing Unit Commitment Machine Learning
 
 If you use the Unit Commitment Machine Learning code, please cite the following reference using the following entry.
 
