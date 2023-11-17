@@ -21,6 +21,8 @@ The [`requirements.txt`](requirements.txt) file includes all the necessary packa
 
    ```pip install -r requirements.txt```
 
+We strongly recommend creating a ['virtual environment'(https://docs.anaconda.com/free/navigator/tutorials/manage-environments/) to install necessary packages.
+
 ## Demo
 
 To get started, please follow the instructions in the [Datasets](Datasets) and [Pretrained_Models](Pretrained_Models) folders to download the dataset(s) and model(s) respectively.
