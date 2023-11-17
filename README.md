@@ -21,7 +21,7 @@ The [`requirements.txt`](requirements.txt) file includes all the necessary packa
 
    ```pip install -r requirements.txt```
 
-We strongly recommend creating a ['virtual environment'(https://docs.anaconda.com/free/navigator/tutorials/manage-environments/) to install necessary packages.
+We strongly recommend creating a [`virtual environment`](https://docs.anaconda.com/free/navigator/tutorials/manage-environments/) to install necessary packages.
 
 ## Demo
 
